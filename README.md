@@ -6,9 +6,9 @@ closebuy
 
 ## Team
 
-  - __Product Owner__: teamMember
-  - __Scrum Master__: teamMember
-  - __Development Team Members__: teamMember, teamMember
+  - __Product Owner__: Dara Bun
+  - __Scrum Master__: Tejaswini Pingili
+  - __Development Team Members__: Lawrence Kang, Tyler Lewis
 
 ## Table of Contents
 
