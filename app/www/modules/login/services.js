@@ -4,6 +4,16 @@ angular.module('closebuy.login.services', [])
   var loginUser = function() {
     //
   };
+
+  var logoutUser = function() {
+    FB.logout(function(response) {
+      console.log("HERE?")
+    });
+  };
+
+  return {
+    logoutUser: logoutUser
+  };
 });
 
 
