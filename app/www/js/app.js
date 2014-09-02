@@ -43,8 +43,17 @@ angular.module('starter', ['ionic', 'login', 'sellbuy', 'sell', 'camerasplash', 
     })
 
     // setup an abstract state for the tabs directive
+<<<<<<< HEAD
 
     .state('tab', {
+=======
+    .state('login', {
+      url: "/login",
+      templateUrl: "modules/login/login.html"
+    });
+
+    /*.state('tab', {
+>>>>>>> Add Facebook SDK, add FB login button to homepage, delete unnecessary code in controllers and services
       url: "/tab",
       abstract: true,
       templateUrl: "templates/tabs.html"
@@ -142,12 +151,17 @@ angular.module('starter', ['ionic', 'login', 'sellbuy', 'sell', 'camerasplash', 
           controller: 'AccountCtrl'
         }
       }
-    });
+    });*/
 
   // if none of the above states are matched, use this as the fallback
+<<<<<<< HEAD
   // right now this defaults to the "Sell Desription" page
   // Changed to login page for testing of authorization; will change back soon
   $urlRouterProvider.otherwise('/login');
   // $urlRouterProvider.otherwise('/tab/sell');
+=======
+  $urlRouterProvider.otherwise('/login');
+
+>>>>>>> Add Facebook SDK, add FB login button to homepage, delete unnecessary code in controllers and services
 });
 
