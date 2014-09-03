@@ -1,5 +1,10 @@
-<ion-view title="Dashboard">
+<ion-view title="Sell Confirmation">
   <ion-content class="has-header padding">
-    <h1>Dash</h1>
+    <div>Thanks for using Closebuy to sell your item</div>
+    <ul>Here's what you listed:
+      <li>Price: {{item.price}}</li>
+      <li>Description: {{item.description}}</li>
+      <li>Photo: <img src="{{item.imgUrl}}" style="max-height:150px; max-width:150px;"/></li>
+    </ul>
   </ion-content>
 </ion-view>
