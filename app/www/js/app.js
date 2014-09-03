@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
+angular.module('starter', ['ionic', 'sell', 'ui.router']) 
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -30,23 +30,38 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   $stateProvider
 
     // setup an abstract state for the tabs directive
+
+
+
     .state('tab', {
       url: "/tab",
       abstract: true,
       templateUrl: "templates/tabs.html"
     })
 
-    // Each tab has its own nav history stack:
 
-    .state('tab.dash', {
-      url: '/dash',
+    // routing for sell description page
+    .state('tab.sell', {
+      url: "/sell",
       views: {
-        'tab-dash': {
-          templateUrl: 'templates/tab-dash.html',
-          controller: 'DashCtrl'
-        }
+        'tab-sell': {
+          templateUrl: "modules/sell-description/sell-description.html",
+          controller: "SellController"
+         }
       }
     })
+
+    // routing for confirmation page
+    .state('tab.sell-confirmation', {
+      url: "/sell/confirmation",
+      views: {
+        'tab-sell': {
+          templateUrl: "modules/sell-confirmation/sell-confirmation.html",
+          controller: "SellController"
+         }
+      }
+    })
+
 
     .state('tab.friends', {
       url: '/friends',
@@ -78,7 +93,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/dash');
+  // right now this defaults to the "Sell Desription" page
+  $urlRouterProvider.otherwise('/tab/sell');
 
 });
 

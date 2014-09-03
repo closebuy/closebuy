@@ -1,5 +1,18 @@
-<ion-view title="Dashboard">
+<ion-view title="Sell">
   <ion-content class="has-header padding">
-    <h1>Dash</h1>
+    <div>
+    <img src="{{item.imgUrl}}" style="max-height:150px; max-width:150px;"/>
+     <form class="simple-form" name="sellForm">
+      Set Price: <input type="number" ng-model="item.price" required name="Price"/> <br />
+      Item Description: <input type="text" ng-model="item.description" ng-maxlength="40" name="Desc" placeholder="40 character max" />
+      <span class="error" ng-show="sellForm.Desc.$error.maxlength">
+      Description is too long</span><br>
+
+      <button ng-click="retake()">Re-Take Photo</button> <br />
+      <button ng-click="sell(item, go)">Sell Item</button> <br />
+
+      {{item}}
+     </form>
+    </div>
   </ion-content>
 </ion-view>

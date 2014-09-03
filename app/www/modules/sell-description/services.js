@@ -1,26 +1,17 @@
-angular.module('starter.services', [])
+angular.module('sell.Services', [])
 
-/**
- * A simple example service that returns some data.
- */
-.factory('Friends', function() {
-  // Might use a resource here that returns a JSON array
+.factory('SaleItem', function() {
 
-  // Some fake testing data
-  var friends = [
-    { id: 0, name: 'Scruff McGruff' },
-    { id: 1, name: 'G.I. Joe' },
-    { id: 2, name: 'Miss Frizzle' },
-    { id: 3, name: 'Ash Ketchum' }
-  ];
+  var price = 0;
+  var description = "";
+  // imgUrl is fake testing data
+  var imgUrl = "https://raw.githubusercontent.com/closebuy/closebuy/master/reference/IMG_20140829_151143.jpg";
 
   return {
-    all: function() {
-      return friends;
-    },
-    get: function(friendId) {
-      // Simple index lookup
-      return friends[friendId];
-    }
-  }
+    price: price,
+    description: description,
+    imgUrl: imgUrl
+
+  };
 });
+
