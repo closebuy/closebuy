@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'sell', 'ui.router']) 
+angular.module('starter', ['ionic', 'sell', 'camerasplash', 'ui.router']) 
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -62,6 +62,16 @@ angular.module('starter', ['ionic', 'sell', 'ui.router'])
       }
     })
 
+    // routing for camera splash page
+    .state('tab.camera', {
+      url: '/camera',
+      views: {
+        'tab-camera': {
+          templateUrl: 'modules/camera-splash/camera-splash.html',
+          controller: 'CameraController'
+        }
+      }
+    })
 
     .state('tab.friends', {
       url: '/friends',
