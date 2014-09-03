@@ -1,0 +1,40 @@
+.camera-splash-btn {
+	font-size: 15em;
+	color: #8AB839;
+	cursor: pointer;
+	transition: 1s;
+	/*background: red;*/
+}
+
+.camera-splash-btn:hover {
+	color: red;
+	transition: 1s;
+	color: #749D2C;
+	/*background: red;*/
+}
+
+/*.wrapper {
+	width: 100%;
+	text-align: center;
+	margin: 0 auto;
+	background: yellow;
+}*/
+
+/*.vertical-align {
+	position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}*/
+
+/*.vertical-align .scroll-content {
+  display: table !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+.vertical-align .scroll {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}*/

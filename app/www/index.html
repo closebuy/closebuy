@@ -8,6 +8,8 @@
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
+    <!-- Custom CSS for each module -->
+    <link href="modules/camera-splash/camera-splash.css" rel="stylesheet">
     <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
     <link href="css/ionic.app.css" rel="stylesheet">
     -->
@@ -33,6 +35,19 @@
     <script src="modules/sell-description/services.js"></script>
     <script src="modules/sell-description/controllers.js"></script>
 
+    <!-- This controller and service is for the camera splash page.
+    The services file has a Camera factory which will be shared with sell-description -->
+    <script src="modules/camera-splash/controllers.js"></script>
+    <script src="modules/camera-splash/services.js"></script>
+
+    <!-- PARSE -->
+    <script src="http://www.parsecdn.com/js/parse-1.2.19.min.js"></script>
+    <script type="text/javascript">
+      var parseAPPID = "9Y6Y8st5F2hlY9C8EaAuSC6uzxonmVkUgK6CUJGW";
+      var parseJSID = "VQxaM26lNmiWirdttRurESuR0zzkY0CXQs19WInP";
+       
+      Parse.initialize(parseAPPID, parseJSID);
+    </script>
   </head>
   <body ng-app="starter" animation="slide-left-right-ios7">
     <!-- 
