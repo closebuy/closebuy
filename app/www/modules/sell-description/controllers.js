@@ -1,15 +1,25 @@
-angular.module('starter.controllers', [])
+angular.module('sell.Description', ['sell.services'])
 
-.controller('DashCtrl', function($scope) {
-})
+.controller('SellController', ['$scope', 'SaleItem', '$state', function($scope, SaleItem, $state) {
+  $scope.item =  SaleItem;
+  $scope.item.imgUrl = SaleItem.imgUrl;
 
-.controller('FriendsCtrl', function($scope, Friends) {
-  $scope.friends = Friends.all();
-})
+  $scope.retake = function(){
+    alert("This should allow you to re-take the picture");
+  };
 
-.controller('FriendDetailCtrl', function($scope, $stateParams, Friends) {
-  $scope.friend = Friends.get($stateParams.friendId);
-})
+  $scope.sell = function(item, callback){
+    SaleItem = item;
+    $state.go('tab.sell-confirmation');
+  };
 
-.controller('AccountCtrl', function($scope) {
-});
+   
+
+
+  $scope.go = function(){
+    console.log("$scope.item from go: ", $scope.item);
+      // transition to confirmation page
+  };
+
+}]);
+
