@@ -33,6 +33,11 @@ angular.module('closebuy', ['ionic', 'closebuy.controllers', 'closebuy.services'
     .state('login', {
       url: "/login",
       templateUrl: "modules/login/login.html"
+    })
+
+    .state('sellbuy', {
+      url: "/sellbuy-splash",
+      templateUrl: "modules/login/sellbuy-splash.html"
     });
 
     /*.state('tab', {
