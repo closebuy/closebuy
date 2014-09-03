@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'sell', 'ui.router'])
+angular.module('starter', ['ionic', 'sell', 'ui.router']) 
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -39,6 +39,8 @@ angular.module('starter', ['ionic', 'sell', 'ui.router'])
       templateUrl: "templates/tabs.html"
     })
 
+
+    // routing for sell description page
     .state('tab.sell', {
       url: "/sell",
       views: {
@@ -49,6 +51,7 @@ angular.module('starter', ['ionic', 'sell', 'ui.router'])
       }
     })
 
+    // routing for confirmation page
     .state('tab.sell-confirmation', {
       url: "/sell/confirmation",
       views: {
@@ -90,6 +93,7 @@ angular.module('starter', ['ionic', 'sell', 'ui.router'])
     });
 
   // if none of the above states are matched, use this as the fallback
+  // right now this defaults to the "Sell Desription" page
   $urlRouterProvider.otherwise('/tab/sell');
 
 });

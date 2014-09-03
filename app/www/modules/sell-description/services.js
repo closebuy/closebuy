@@ -1,14 +1,10 @@
-angular.module('sell.services', [])
+angular.module('sell.Services', [])
 
-/**
- * A simple example service that returns some data.
- */
 .factory('SaleItem', function() {
-  // Might use a resource here that returns a JSON array
 
-  // Some fake testing data
   var price = 0;
   var description = "";
+  // imgUrl is fake testing data
   var imgUrl = "https://raw.githubusercontent.com/closebuy/closebuy/master/reference/IMG_20140829_151143.jpg";
 
   return {
@@ -17,21 +13,5 @@ angular.module('sell.services', [])
     imgUrl: imgUrl
 
   };
-})
+});
 
-
-// .factory('SellService', function() {
-//   // Might use a resource here that returns a JSON array
-
-//   // Some fake testing data
-//   var price = 0;
-//   var description = "";
-//   var imgUrl = "https://raw.githubusercontent.com/closebuy/closebuy/master/reference/IMG_20140829_151143.jpg";
-
-//   return {
-//     price: price,
-//     description: description,
-//     imgUrl: imgUrl
-
-//   };
-// });

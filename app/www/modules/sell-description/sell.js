@@ -1,2 +1,2 @@
-angular.module('sell', ['ionic', 'sell.Description']);
+angular.module('sell', ['ionic', 'sell.Controller']);
 
