@@ -1,4 +1,4 @@
-angular.module('login', ['login.services'])
+angular.module('closebuy.login.controllers', [])
 
 .controller('LoginController', function($scope, Auth) {
   $scope.existingUser = {};

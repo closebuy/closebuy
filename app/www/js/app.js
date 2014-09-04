@@ -5,7 +5,8 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'sell', 'camerasplash', 'ui.router']) 
+
+angular.module('starter', ['ionic', 'login', 'sellbuy', 'sell', 'camerasplash', 'ui.router']) 
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -29,16 +30,25 @@ angular.module('starter', ['ionic', 'sell', 'camerasplash', 'ui.router'])
   // Each state's controller can be found in controllers.js
   $stateProvider
 
+    // Routing for user login/signup page
+    .state('login', {
+      url: "/login",
+      templateUrl: "modules/login/login.html"
+    })
+
+    // Routing for sellbuy-splash page
+    .state('sellbuy', {
+      url: "/sellbuy-splash",
+      templateUrl: "modules/sellbuy-splash/sellbuy-splash.html"
+    })
+
     // setup an abstract state for the tabs directive
-
-
 
     .state('tab', {
       url: "/tab",
       abstract: true,
       templateUrl: "templates/tabs.html"
     })
-
 
     // routing for sell description page
     .state('tab.sell', {
@@ -104,7 +114,7 @@ angular.module('starter', ['ionic', 'sell', 'camerasplash', 'ui.router'])
 
   // if none of the above states are matched, use this as the fallback
   // right now this defaults to the "Sell Desription" page
-  $urlRouterProvider.otherwise('/tab/sell');
-
+  // Changed to login page for testing of authorization; will change back soon
+  $urlRouterProvider.otherwise('/login');
+  // $urlRouterProvider.otherwise('/tab/sell');
 });
-
