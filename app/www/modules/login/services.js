@@ -50,7 +50,9 @@ angular.module('login.services', [])
   }
 
   var logoutUser = function() {
-    
+    // Log out the current user and redirect to login page
+    Parse.User.logOut();
+    $state.go('login');
   };
 
   return {
