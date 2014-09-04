@@ -5,7 +5,10 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
+<<<<<<< HEAD
 angular.module('starter', ['ionic', 'login', 'sellbuy', 'sell', 'camerasplash', 'ui.router']) 
+=======
+>>>>>>> 9976ab40ec7032767b45f04c2f8162a318d9e198
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -42,7 +45,17 @@ angular.module('starter', ['ionic', 'login', 'sellbuy', 'sell', 'camerasplash', 
     })
 
     // setup an abstract state for the tabs directive
-    .state('tab', {
+    .state('login', {
+      url: "/login",
+      templateUrl: "modules/login/login.html"
+    })
+
+    .state('sellbuy', {
+      url: "/sellbuy-splash",
+      templateUrl: "modules/sellbuy-splash/sellbuy-splash.html"
+    });
+
+    /*.state('tab', {
       url: "/tab",
       abstract: true,
       templateUrl: "templates/tabs.html"
@@ -108,13 +121,17 @@ angular.module('starter', ['ionic', 'login', 'sellbuy', 'sell', 'camerasplash', 
           controller: 'AccountCtrl'
         }
       }
-    });
+    });*/
 
   // if none of the above states are matched, use this as the fallback
+<<<<<<< HEAD
   // right now this defaults to the "Sell Desription" page
   // Changed to login page for testing of authorization; will change back soon
   $urlRouterProvider.otherwise('/login');
   // $urlRouterProvider.otherwise('/tab/sell');
+=======
+  $urlRouterProvider.otherwise('/login');
+>>>>>>> 9976ab40ec7032767b45f04c2f8162a318d9e198
 
 });
 

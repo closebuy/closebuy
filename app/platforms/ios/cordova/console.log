@@ -1,0 +1,35 @@
+2014-09-02 17:35:55.693 closebuy[4197:90b] Multi-tasking -> Device: YES, App: YES
+2014-09-02 17:35:55.716 closebuy[4197:90b] Unlimited access to network resources
+2014-09-02 17:35:59.990 closebuy[4197:90b] [CDVTimer][keyboard] 0.081003ms
+2014-09-02 17:35:59.991 closebuy[4197:90b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-09-02 17:35:59.992 closebuy[4197:90b] [CDVTimer][statusbar] 0.483990ms
+2014-09-02 17:35:59.992 closebuy[4197:90b] [CDVTimer][TotalPluginStartup] 1.961946ms
+2014-09-02 17:36:00.670 closebuy[4197:90b] Resetting plugins due to page load.
+2014-09-02 17:36:01.488 closebuy[4197:90b] THREAD WARNING: ['Device'] took '37.983887' ms. Plugin should use a background thread.
+2014-09-02 17:36:01.526 closebuy[4197:90b] Finished load of: file:///Users/tylerlewis/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/6EE8A27C-7293-4EE7-BC81-FF47342BF883/closebuy.app/www/index.html#/login
+2014-09-02 21:30:34.576 closebuy[1206:90b] Multi-tasking -> Device: YES, App: YES
+2014-09-02 21:30:34.741 closebuy[1206:90b] Unlimited access to network resources
+2014-09-02 21:30:36.605 closebuy[1206:90b] [CDVTimer][keyboard] 0.092983ms
+2014-09-02 21:30:36.606 closebuy[1206:90b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-09-02 21:30:36.607 closebuy[1206:90b] [CDVTimer][statusbar] 0.494003ms
+2014-09-02 21:30:36.607 closebuy[1206:90b] [CDVTimer][TotalPluginStartup] 2.218008ms
+2014-09-02 21:30:36.850 closebuy[1206:90b] Resetting plugins due to page load.
+2014-09-02 21:30:37.257 closebuy[1206:90b] Finished load of: file:///Users/tylerlewis/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/6EE8A27C-7293-4EE7-BC81-FF47342BF883/closebuy.app/www/index.html#/login
+2014-09-02 22:10:20.259 closebuy[1617:90b] Multi-tasking -> Device: YES, App: YES
+2014-09-02 22:10:20.284 closebuy[1617:90b] Unlimited access to network resources
+2014-09-02 22:10:20.322 closebuy[1617:90b] [CDVTimer][keyboard] 0.057042ms
+2014-09-02 22:10:20.322 closebuy[1617:90b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-09-02 22:10:20.323 closebuy[1617:90b] [CDVTimer][statusbar] 0.450015ms
+2014-09-02 22:10:20.323 closebuy[1617:90b] [CDVTimer][TotalPluginStartup] 1.495004ms
+2014-09-02 22:10:20.690 closebuy[1617:90b] Resetting plugins due to page load.
+2014-09-02 22:10:21.011 closebuy[1617:90b] Finished load of: file:///Users/tylerlewis/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/6EE8A27C-7293-4EE7-BC81-FF47342BF883/closebuy.app/www/index.html#/login
+2014-09-03 11:47:25.250 closebuy[526:90b] Multi-tasking -> Device: YES, App: YES
+2014-09-03 11:47:25.454 closebuy[526:90b] Unlimited access to network resources
+2014-09-03 11:47:26.595 closebuy[526:90b] [CDVTimer][keyboard] 0.080049ms
+2014-09-03 11:47:26.596 closebuy[526:90b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-09-03 11:47:26.596 closebuy[526:90b] [CDVTimer][statusbar] 0.467002ms
+2014-09-03 11:47:26.597 closebuy[526:90b] [CDVTimer][TotalPluginStartup] 1.671970ms
+2014-09-03 11:47:26.853 closebuy[526:90b] Resetting plugins due to page load.
+2014-09-03 11:47:27.919 closebuy[526:90b] Finished load of: file:///Users/tylerlewis/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/6EE8A27C-7293-4EE7-BC81-FF47342BF883/closebuy.app/www/index.html#/login
+2014-09-03 11:48:00.546 closebuy[526:90b] ERROR: You must initialize FacebookUtils before calling logIn.
+2014-09-03 11:48:03.669 closebuy[526:90b] ERROR: You must initialize FacebookUtils before calling logIn.

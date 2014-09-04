@@ -1,0 +1,18 @@
+<ion-pane title="Login">
+  <h1>Closebuy</h1>
+  <div ng-controller="LoginController" class="loginBox">
+    <h3>Log In</h3>
+    <form class="loginExisting">
+      <input class="existingUsername" type="text" placeholder="Username" ng-model="existingUser.username" ngRequired="true" ngMaxlength="12">
+      <input class="existingPassword" type="password" placeholder="Password" ng-model="existingUser.password" ngRequired="true">
+      <button type="submit" ng-click="loginUser()">Log In</button>
+    </form>
+    <h3>Sign Up</h3>
+    <form class="signupNewUser">
+      <input class="newUsername" type="text" placeholder="Username" ng-model="newUser.username" ngRequired="true">
+      <input class="newPassword" type="password" placeholder="Password" ng-model="newUser.password" ngRequired="true">
+      <button type="submit" ng-click="signupUser()">Sign Up</button>
+    </form>
+    <!-- <button ng-controller="LoginController" ng-click="logoutUser()">Log Out</button> -->
+  </div>
+</ion-pane>

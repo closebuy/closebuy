@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 angular.module('login.services', [])
+=======
+>>>>>>> 9976ab40ec7032767b45f04c2f8162a318d9e198
 
 .factory('Auth', function($state) {
   // Login existing user in Parse database
@@ -59,3 +62,5 @@ angular.module('login.services', [])
     logoutUser: logoutUser
   };
 });
+
+
