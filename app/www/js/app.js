@@ -6,7 +6,7 @@
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
 
-angular.module('starter', ['ionic', 'login', 'sellbuy', 'sell', 'camerasplash', 'ui.router']) 
+angular.module('starter', ['ionic', 'login', 'sellbuy', 'sell', 'camerasplash', 'ui.router', 'geo']) 
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -83,12 +83,13 @@ angular.module('starter', ['ionic', 'login', 'sellbuy', 'sell', 'camerasplash', 
       }
     })
 
-    .state('tab.friends', {
-      url: '/friends',
+    // routing for the geolocation placeholder page (will be integrated with new user creation module) 
+    .state('tab.geo', {
+      url: '/geo',
       views: {
-        'tab-friends': {
-          templateUrl: 'templates/tab-friends.html',
-          controller: 'FriendsCtrl'
+        'tab-geo': {
+          templateUrl: 'modules/geo/geo.html',
+          controller: "GeoController"
         }
       }
     })
