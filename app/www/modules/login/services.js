@@ -10,7 +10,7 @@ angular.module('closebuy.login.services', [])
         Parse.User.become(token, {
           // If successful in authorizing user with token, take them to the 'sellbuy' screen
           success: function(user) {
-            $state.transitionTo('/sellbuy');
+            $state.go('sellbuy');
           }, 
           error: function(error) {
             //
@@ -36,7 +36,7 @@ angular.module('closebuy.login.services', [])
         Parse.User.become(token, {
           // If successful in authorizing user with token, take them to the 'sellbuy' screen
           success: function(user) {
-            $state.transitionTo('/sellbuy');
+            $state.go('sellbuy');
           }, 
           error: function(error) {
             //

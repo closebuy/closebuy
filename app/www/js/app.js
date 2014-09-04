@@ -37,7 +37,7 @@ angular.module('closebuy', ['ionic', 'closebuy.controllers', 'closebuy.services'
 
     .state('sellbuy', {
       url: "/sellbuy-splash",
-      templateUrl: "modules/login/sellbuy-splash.html"
+      templateUrl: "modules/sellbuy-splash/sellbuy-splash.html"
     });
 
     /*.state('tab', {
