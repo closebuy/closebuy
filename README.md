@@ -36,12 +36,12 @@ Closebuy
 
 ### Installing Dependencies
 
-From within the root directory:
+From within the app directory:
 
 ```sh
-sudo npm install -g bower
-npm install
-bower install
+npm install q
+npm install shelljs
+cordova plugin add org.apache.cordova.camera
 ```
 
 ### Roadmap
