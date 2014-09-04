@@ -1,4 +1,4 @@
-closebuy
+Closebuy
 ========
 # Project Name
 
