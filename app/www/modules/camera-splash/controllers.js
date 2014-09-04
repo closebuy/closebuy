@@ -1,6 +1,6 @@
-angular.module('camerasplash', ['camerasplash.services'])
+angular.module('camerasplash', ['camerasplash.services', 'sell.Services'])
 
-.controller('CameraController', function($scope, $state, Camera) {
+.controller('CameraController', ['$scope', '$state', 'Camera', 'SaleItem', function($scope, $state, Camera, SaleItem) {
   // $scope.cam = Camera.picUrl;
   $scope.cam = Camera.picUrl;
   // this watcher links $scope.cam to the Camera.picUrl service
@@ -23,6 +23,10 @@ angular.module('camerasplash', ['camerasplash.services'])
         // sets the picUrl in the factory to the URL of the image on Parse
         Camera.picUrl = response._url;
 
+        // change the SaleItem imgUrl to match the picUrl
+
+        SaleItem.imgUrl = Camera.picUrl;
+
         // force reset digest loop so that the image will update on the view
         // $scope.$apply();
 
@@ -38,7 +42,7 @@ angular.module('camerasplash', ['camerasplash.services'])
       console.err(err);
     });
   };
-})
+}])
 .config(function($compileProvider){
   // VERY important. Do not touch. This whitelists the image source
   $compileProvider.imgSrcSanitizationWhitelist(/^\s*(https?|ftp|file|blob):|data:image\//);
