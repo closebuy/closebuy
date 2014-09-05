@@ -6,7 +6,7 @@
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
 
-angular.module('starter', ['ionic', 'login', 'sellbuy', 'sell', 'camerasplash', 'ui.router']) 
+angular.module('starter', ['ionic', 'login', 'sellbuy', 'sell', 'camerasplash', 'buybrowse', 'buyconfirm', 'buythankyou', 'ui.router']) 
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -79,6 +79,38 @@ angular.module('starter', ['ionic', 'login', 'sellbuy', 'sell', 'camerasplash', 
         'tab-camera': {
           templateUrl: 'modules/camera-splash/camera-splash.html',
           controller: 'CameraController'
+        }
+      }
+    })
+
+    // routing for buy browse page
+    .state('tab.buybrowse', {
+      url: '/buy',
+      views: {
+        'tab-buy': {
+          templateUrl: "modules/buy-browse/buybrowse.html",
+          controller: "BuyBrowseController"
+         }
+      }
+    })
+
+    // routing for buy confirmation page
+    .state('tab.buyconfirmation', {
+      url: "/buy/confirmation",
+      views: {
+        'tab-buy': {
+          templateUrl: "modules/buy-confirmation/buy-confirmation.html",
+          controller: "ConfirmController"
+         }
+      }
+    })
+
+    .state('tab.buythankyou', {
+      url: '/buy/confirmation/thanks',
+      views: {
+        'tab-buy': {
+          templateUrl: 'modules/buy-thankyou/buy-thankyou.html',
+          controller: 'BuyThanksController'
         }
       }
     })

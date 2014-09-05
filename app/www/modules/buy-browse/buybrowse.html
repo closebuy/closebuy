@@ -1,5 +1,13 @@
-<ion-view title="Dashboard">
+<ion-view title="BuyBrowse">
   <ion-content class="has-header padding">
-    <h1>Dash</h1>
+    <h1>Items</h1>
+    <div class="item item-image myImage" can-swipe="true">
+      <img src="{{currentItem.imgUrl}}" on-swipe-left="onSwipeLeft()" on-swipe-right="onSwipeRight()" style="max-height:300px; max-width:300px;" >
+    </div>
+    <h5>Item Description: {{currentItem.description}}</h5>
+    <p>Price: {{currentItem.price}} </p>
+    <button class="button" ng-click="nextItem()">Next Item</button>
+    <button class="button" ng-click="buyItem()">Buy</button>
+    <p>{{action}}</p>
   </ion-content>
 </ion-view>

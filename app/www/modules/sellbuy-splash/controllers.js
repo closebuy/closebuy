@@ -6,9 +6,8 @@ angular.module('sellbuy', ['sellbuy.services'])
     $state.go('tab.camera');
   };
   
-  // If user selects 'buy', direct them to the 'buy' state/pages
+  // If user selects 'buy', direct them to the 'buybrowse' state/pages
   $scope.goToBuy = function() {
-    console.log("WILL GO TO BUY PAGES");
-    //$state.go();
+    $state.go('tab.buybrowse');
   };
 });
