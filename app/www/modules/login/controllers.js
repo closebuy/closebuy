@@ -10,7 +10,7 @@ angular.module('login', ['login.services'])
   };
 
   $scope.signupUser = function() {
-    Auth.signupUser($scope.newUser);
+    Auth.geoData($scope.newUser);
   }
 
   $scope.logoutUser = function() {
