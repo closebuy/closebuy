@@ -1,15 +1,36 @@
-angular.module('starter.controllers', [])
+angular.module('buybrowse', ['buybrowse.services'])
 
-.controller('DashCtrl', function($scope) {
-})
+.controller('BuyBrowseController', function($scope, BuyItems, $state){
+  $scope.items = BuyItems.all();
+  $scope.itemIndex = 0;
+  $scope.currentItem = $scope.items[$scope.itemIndex];
 
-.controller('FriendsCtrl', function($scope, Friends) {
-  $scope.friends = Friends.all();
-})
+  //when user swipes left, show them the next item
+  $scope.onSwipeLeft = function(){
+    console.log("swipe left");
+    //mark this item as not interested
+    //show the next item in the list
+    $scope.itemIndex++;
+    if($scope.itemIndex < $scope.items.length){
+      $scope.currentItem = $scope.items[$scope.itemIndex];
+    }
+  };
 
-.controller('FriendDetailCtrl', function($scope, $stateParams, Friends) {
-  $scope.friend = Friends.get($stateParams.friendId);
-})
+  //when user swipes right, take them to the buy confirmation page
+  $scope.onSwipeRight = function(){
+    console.log("swipe right");
+    $state.go('tab.buyconfirmation');
+  };
 
-.controller('AccountCtrl', function($scope) {
+  //show them the next item
+  $scope.nextItem = function(){
+    console.log("Not interested in buying");
+    $scope.onSwipeLeft();
+  };
+
+  //take them to the buy confirmation page
+  $scope.buyItem = function(){
+    console.log("Interested in buying");
+    $state.go('tab.buyconfirmation');
+  };
 });

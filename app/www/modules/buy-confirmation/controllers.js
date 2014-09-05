@@ -1,15 +1,8 @@
-angular.module('starter.controllers', [])
+angular.module('buyconfirm', [])
 
-.controller('DashCtrl', function($scope) {
+.controller('ConfirmController', function($scope, $state) {
+  $scope.thankBuyer = function(){
+    console.log("Thank you buyer");
+    $state.go('tab.buythankyou');
+  };
 })
-
-.controller('FriendsCtrl', function($scope, Friends) {
-  $scope.friends = Friends.all();
-})
-
-.controller('FriendDetailCtrl', function($scope, $stateParams, Friends) {
-  $scope.friend = Friends.get($stateParams.friendId);
-})
-
-.controller('AccountCtrl', function($scope) {
-});
