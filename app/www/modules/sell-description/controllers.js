@@ -1,4 +1,4 @@
-angular.module('sell.Description', ['sell.Services'])
+angular.module('sell', ['sell.Services'])
 
 .controller('SellController', ['$scope', 'SaleItem', '$state', function($scope, SaleItem, $state) {
   // scope.item is set to the value of the SaleItem factory to preserve the sale item data between views
