@@ -1,1 +1,43 @@
-/* Empty. Add your own CSS if you like */
+/*
+	Style Guide:
+	Primary Color (Background Color): #7accc8
+	Secondary Color (Text Color, H2): #fff;
+	Alternative Color #1 (SignUp/Login Boxes, HeaderLogo color): #434343;
+	Alternative Color #2 (Header Bar, H1): #c7fedd;
+*/
+
+/* This is ionic's 'body', so set background color,
+text colors etc. here */
+.pane {
+	background: #7accc8 !important;
+	color: #fff;
+}
+
+/* Top Bar */
+.title, .bar.bar-stable {
+	background: #c7fedd;
+	font-family: 'Damion', cursive;
+	height: 48px;
+}
+
+.bar {
+	-webkit-box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.37);
+	-moz-box-shadow:    0px 2px 5px 0px rgba(50, 50, 50, 0.37);
+	box-shadow:         0px 2px 5px 0px rgba(50, 50, 50, 0.37);
+}
+
+.bar .title {
+	font-size: 35px;
+}
+
+.logoFont {
+	font-family: 'Damion', cursive;
+}
+
+.center {
+	text-align: center;
+}
+
+.middle {
+	margin-top: 45%;
+}

@@ -1,6 +1,7 @@
 angular.module('camerasplash', ['camerasplash.services', 'sell.Services'])
 
 .controller('CameraController', ['$scope', '$state', 'Camera', 'SaleItem', function($scope, $state, Camera, SaleItem) {
+  $scope.showLoader = false;
   // $scope.cam = Camera.picUrl;
   $scope.cam = Camera.picUrl;
   // this watcher links $scope.cam to the Camera.picUrl service
@@ -13,11 +14,15 @@ angular.module('camerasplash', ['camerasplash.services', 'sell.Services'])
 
 	$scope.takePic = function() {
     Camera.getPicture().then(function(imageData) {
+      $scope.showLoader = true;
       // saving the photo as a base64 image and prefixing
       // it with the appropriate format
       var base64pic = "data:image/jpeg;base64," + imageData;
       // uploading to Parse using the Parse Javascript SDK
       var parseFile = new Parse.File("cb.jpg", {base64:imageData});
+
+      // start loading animation
+      
 
       parseFile.save().then(function(response) {
         // sets the picUrl in the factory to the URL of the image on Parse
@@ -29,7 +34,7 @@ angular.module('camerasplash', ['camerasplash.services', 'sell.Services'])
 
         // force reset digest loop so that the image will update on the view
         // $scope.$apply();
-
+        $scope.showLoader = false;
         $state.go('tab.sell');
         // console.log(Camera.picUrl);
         // $scope.resp = r._url;
