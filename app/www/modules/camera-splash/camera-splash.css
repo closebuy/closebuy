@@ -1,18 +1,27 @@
-.camera-splash-btn {
-	font-size: 15em;
-	color: #8AB839;
+.camera-btn {
+	font-size: 18em;
+	color: #fff;
 	cursor: pointer;
 	transition: 1s;
-	/*background: red;*/
 }
 
-.camera-splash-btn:hover {
-	color: red;
+.camera-btn:hover{
 	transition: 1s;
-	color: #749D2C;
+	/*color: #749D2C;*/
 	/*background: red;*/
 }
 
+.camera-uploading{
+	font-size: 18em;
+	color: #fff;
+}
+
+.hidden {
+	display: none;
+}
+.loading-background{
+	
+}
 /*.wrapper {
 	width: 100%;
 	text-align: center;

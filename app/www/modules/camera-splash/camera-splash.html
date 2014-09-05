@@ -1,19 +1,14 @@
-<ion-view title="Camera">
-<div class="vertical-align">
+<ion-view title="Closebuy">
   <ion-content class="has-header padding">
     <!-- <h1>Cameraa</h1> -->
     	<!-- <div>avilable at: {{ avail }}</div> -->
-    	<div style="margin-bottom:50px">
-    		<button style="padding:20px" ng-click="takePic()">Take Pic</button>
+    	<div class="center middle">
+        <i ng-click="takePic()" ng-class="{hidden: showLoader === true}" class="camera-btn ion-camera"></i>
+        <div ng-class="{hidden: showLoader === false}" class="camera-uploading ion-loading-c"></div>
     	</div>
 <!--     	<div style="float:right;margin-bottom:50px">
 				<i ng-click="testUpload()" class="entypo camera-splash-btn">&#128247;</i>
 			</div> -->
-			<img style="float:left;clear:both;margin-top:20px;width:50%;height:auto" ng-src="{{cam}}" />
-			<div style="float:left;clear:both;">
-				resp: {{ resp }}
-			</div>
+			<!-- <img style="float:left;clear:both;margin-top:20px;width:50%;height:auto" ng-src="{{cam}}" /> -->
   </ion-content>
-</div>
-
 </ion-view>
