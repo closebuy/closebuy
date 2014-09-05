@@ -1,15 +1,19 @@
-angular.module('starter.controllers', [])
+angular.module('login', ['login.services'])
 
-.controller('DashCtrl', function($scope) {
-})
+.controller('LoginController', function($scope, Auth) {
+  $scope.existingUser = {};
 
-.controller('FriendsCtrl', function($scope, Friends) {
-  $scope.friends = Friends.all();
-})
+  $scope.newUser = {};
 
-.controller('FriendDetailCtrl', function($scope, $stateParams, Friends) {
-  $scope.friend = Friends.get($stateParams.friendId);
-})
+  $scope.loginUser = function() {
+    Auth.loginUser($scope.existingUser);
+  };
 
-.controller('AccountCtrl', function($scope) {
+  $scope.signupUser = function() {
+    Auth.signupUser($scope.newUser);
+  }
+
+  $scope.logoutUser = function() {
+    Auth.logoutUser();
+  };
 });

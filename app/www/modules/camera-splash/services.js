@@ -8,11 +8,14 @@ angular.module('camerasplash.services', [])
   var getPicture = function(options) {
     var q = $q.defer();
 
-    navigator.camera.getPicture(function(result) {
-      q.resolve(result);
-    }, function(err) {
-      q.reject(err);
-    }, {
+    navigator.camera.getPicture(
+      function(result) {
+        q.resolve(result);
+      }, 
+      function(err) {
+        q.reject(err);
+      }, 
+      {
       // set on a low quality for now so not to kill memory as we're using base64 images
       'quality': 40, 
       // DATA_URL = Base64 image. There are other settings, specifically FILE_URI,
@@ -28,5 +31,5 @@ angular.module('camerasplash.services', [])
   return {
     picUrl: picUrl,
     getPicture: getPicture
-  }
+  };
 }])

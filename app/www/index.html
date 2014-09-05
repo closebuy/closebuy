@@ -9,6 +9,8 @@
     <link href="css/style.css" rel="stylesheet">
 
     <!-- Custom CSS for each module -->
+    <link href="modules/login/login.css" rel="stylesheet">
+    <link href="modules/sellbuy-splash/sellbuy-splash.css" rel="stylesheet">
     <link href="modules/camera-splash/camera-splash.css" rel="stylesheet">
     <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
     <link href="css/ionic.app.css" rel="stylesheet">
@@ -23,10 +25,21 @@
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
 
+    <!-- Parse -->
+    <!-- <script src="lib/parse/parse-1.2.19.js"></script> -->
+
     <!-- your app's js -->
     <script src="js/app.js"></script>
     <script src="js/controllers.js"></script>
     <script src="js/services.js"></script>
+
+    <!-- login controllers and services needed for login/signup -->
+    <script src="modules/login/controllers.js"></script>
+    <script src="modules/login/services.js"></script>
+    
+    <!-- sellbuy-splash controllers and services needed for screen immediately following login screen -->
+    <script src="modules/sellbuy-splash/services.js"></script>
+    <script src="modules/sellbuy-splash/controllers.js"></script>
 
     <!-- sell.js is the module for the Sell Description and Sell Confirmation views -->
     <script src="modules/sell-description/sell.js"></script>
@@ -40,16 +53,27 @@
     <script src="modules/camera-splash/controllers.js"></script>
     <script src="modules/camera-splash/services.js"></script>
 
+    <!-- These files set up the geolocation module.  This requires installing
+    the geolocation plugin: https://github.com/apache/cordova-plugin-geolocation/blob/master/doc/index.md  -->
+    <script src="modules/geo/geo.js"></script>
+    <script src="modules/geo/services.js"></script>
+    <script src="modules/geo/controllers.js"></script>
+    
     <!-- PARSE -->
     <script src="http://www.parsecdn.com/js/parse-1.2.19.min.js"></script>
+
+    <!-- Commented out for now so we can use the Parse database with users, items, photos, etc. -->
     <script type="text/javascript">
-      var parseAPPID = "9Y6Y8st5F2hlY9C8EaAuSC6uzxonmVkUgK6CUJGW";
-      var parseJSID = "VQxaM26lNmiWirdttRurESuR0zzkY0CXQs19WInP";
+    //   var parseAPPID = "9Y6Y8st5F2hlY9C8EaAuSC6uzxonmVkUgK6CUJGW";
+    //   var parseJSID = "VQxaM26lNmiWirdttRurESuR0zzkY0CXQs19WInP";
        
-      Parse.initialize(parseAPPID, parseJSID);
-    </script>
+    //   Parse.initialize(parseAPPID, parseJSID);
+    // </script>
   </head>
   <body ng-app="starter" animation="slide-left-right-ios7">
+    <!-- Initialize the Closebuy Parse database -->
+    <script> Parse.initialize('uhJaOJ9suqkyxvPJM31gJT72n4Lw5hzLxvpJmIUi', 'ON5KQehSr5MgtyRoGeu2umgAnBS8wt4RFLZm6qBB'); </script>
+
     <!-- 
       The nav bar that will be updated as we navigate between views.
     -->
