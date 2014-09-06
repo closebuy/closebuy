@@ -1,10 +1,16 @@
 <ion-view title="Sell Confirmation">
   <ion-content class="has-header padding">
-    <div>Thanks for using Closebuy to sell your item</div>
-    <ul>Here's what you listed:
-      <li>Price: {{item.price}}</li>
-      <li>Description: {{item.description}}</li>
-      <li>Photo: <img src="{{item.imgUrl}}" style="max-height:150px; max-width:150px;"/></li>
-    </ul>
+    <div class="sellConfirmContainer">
+      <span>Your item was successfully posted for sale</span> 
+      <br />
+      <ul>Here's what you listed:
+        <li>Photo: <img class="sellImg" src="{{item.imgUrl}}" ></li>
+        <li>Price: {{item.price}}</li>
+        <li>Description: {{item.description}}</li>
+      </ul>
+      <br />
+
+      <div class="sellThanks">Thanks for using Closebuy!</div> 
+    </div>
   </ion-content>
 </ion-view>
