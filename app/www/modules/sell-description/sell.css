@@ -1,0 +1,56 @@
+.sellContainer {
+  color: #6b8665;
+  font-family: Helvetica;
+}
+
+.sellImg {
+  max-width:100%;
+  max-height:auto;
+  border: 5px solid #c4f4f2;
+}
+
+input {
+  background-color: #c4f4f2;
+  border-radius: 5px;
+  color: #6b8665;
+}
+
+.sellConfirm {
+  font-weight: 700;
+  background-color: #cafdb1;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5em;
+}
+
+.sellRetake {
+  font-weight: 700;
+  color: #CCDAE8;
+  background-color: #334550;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5em;
+}
+
+
+.sellConfirmContainer  {
+  color: #6b8665;
+  font-family: Helvetica;
+
+}
+
+.sellConfirmContainer ul {
+  color: #6b8665;
+  font-family: Helvetica;
+  font-weight: 700;
+  background-color: #c4f4f2;
+  border-radius: 5px;
+  padding: 0.5em;
+}
+
+div.sellThanks {
+  font-size:2em;
+  font-family: 'Damion', cursive;
+}
