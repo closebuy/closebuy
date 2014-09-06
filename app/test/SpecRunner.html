@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Mocha Spec Runner</title>
+  <link rel="stylesheet" href="bower_components/mocha/mocha.css">
+</head>
+<body>
+  <div id="mocha"></div>
+  <script src="bower_components/mocha/mocha.js"></script>
+  <script>mocha.setup('')</script>
+  <script src="bower_components/chai/chai.js"></script>
+  <script>
+    var assert = chai.assert;
+    var expect = chai.expect;
+    var should = chai.should();
+  </script>
+
+  <!-- include source files here... -->
+  <script src="test.js"></script>
+  
+   <!-- ionic/angularjs js -->
+
+  <script src="../www/lib/ionic/js/ionic.bundle.js"></script>
+  <script src="node_modules/angular-mocks/angular-mocks.js"></script>
+
+
+  <!-- ui-router loading -->
+  <script src="../www/lib/ionic/js/angular-ui/angular-ui-router.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+  <script src="cordova.js"></script>
+  
+  <script src="../www/js/app.js"></script>
+  <script src="../www/js/controllers.js"></script>
+  <script src="../www/js/services.js"></script>
+
+  <!-- login controllers and services needed for login/signup -->
+  <script src="../www/modules/login/controllers.js"></script>
+  <script src="../www/modules/login/services.js"></script>
+  
+  <!-- sellbuy-splash controllers and services needed for screen immediately following login screen -->
+  <script src="../www/modules/sellbuy-splash/services.js"></script>
+  <script src="../www/modules/sellbuy-splash/controllers.js"></script>
+
+  <!-- sell services and controllers are shared by Sell Description and Sell Confirmation views.  Each of these is a separate module; the service is injected into the controller, and the controller is injected into the sell.js module -->
+  <script src="../www/modules/sell-description/services.js"></script>
+  <script src="../www/modules/sell-description/controllers.js"></script>
+
+  <!-- This controller and service is for the camera splash page.
+  The services file has a Camera factory which will be shared with sell-description -->
+  <script src="../www/modules/camera-splash/controllers.js"></script>
+  <script src="../www/modules/camera-splash/services.js"></script>
+
+  <!-- buy-browse controllers and services needed for buybrowse view -->
+  <script src="../www/modules/buy-browse/controllers.js"></script>
+  <script src="../www/modules/buy-browse/services.js"></script>
+  
+  <!-- buy-confirmation controller for the confirmation of buying an item -->
+  <script src="../www/modules/buy-confirmation/controllers.js"></script>
+
+  <!-- buy thank you controller for thanking the user -->
+   <script src="../www/modules/buy-thankyou/controllers.js"></script>
+
+  <!-- PARSE -->
+  <script src="http://www.parsecdn.com/js/parse-1.2.19.min.js"></script>
+  <script> Parse.initialize('uhJaOJ9suqkyxvPJM31gJT72n4Lw5hzLxvpJmIUi', 'ON5KQehSr5MgtyRoGeu2umgAnBS8wt4RFLZm6qBB'); </script>
+  
+  <!-- include spec files here... -->
+  <script src="spec/sellControllerSpecs.js"></script>
+
+
+
+
+
+
+  <script>mocha.run()</script>
+</body>
+</html>
