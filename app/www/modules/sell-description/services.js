@@ -4,13 +4,14 @@ angular.module('sell.Services', [])
 
   var price = 0;
   var description = "";
+  // imgUrl is fake testing data
   var imgUrl = "";
 
   return {
     price: price,
     description: description,
     imgUrl: imgUrl
+
   };
-  
 });
 
