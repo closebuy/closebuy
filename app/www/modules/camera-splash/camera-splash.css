@@ -1,8 +1,24 @@
 .camera-btn {
-	font-size: 18em;
+	font-size: 15em;
 	color: #fff;
 	cursor: pointer;
 	transition: 1s;
+	background: #93d6d3;
+	border-radius: 50%;
+	padding: 0 0.20em;
+	border: 20px solid #87d1ce;
+}
+
+#camera-splash .activated{
+	font-size: 15em;
+	color: #fff;
+	cursor: pointer;
+	transition: 2s;
+	/*background: #93d6d3;*/
+	background: #F45358;
+	border-radius: 50%;
+	padding: 0 0.20em;
+	border: 35px solid #87d1ce;
 }
 
 .camera-btn:hover{

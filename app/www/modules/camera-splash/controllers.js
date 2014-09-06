@@ -21,23 +21,15 @@ angular.module('camerasplash', ['camerasplash.services', 'sell.Services'])
       // uploading to Parse using the Parse Javascript SDK
       var parseFile = new Parse.File("cb.jpg", {base64:imageData});
 
-      // start loading animation
-      
-
       parseFile.save().then(function(response) {
         // sets the picUrl in the factory to the URL of the image on Parse
         Camera.picUrl = response._url;
 
         // change the SaleItem imgUrl to match the picUrl
-
         SaleItem.imgUrl = Camera.picUrl;
 
-        // force reset digest loop so that the image will update on the view
-        // $scope.$apply();
         $scope.showLoader = false;
         $state.go('tab.sell');
-        // console.log(Camera.picUrl);
-        // $scope.resp = r._url;
       }, function(error) {
         // file could not be uploaded to Parse
         alert(error);
