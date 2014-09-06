@@ -26,18 +26,18 @@ angular.module('login.services', [])
   var geoData = function(user){
     GeoData.getData().then(function(position){
       console.log("getData successful: position - ", position);
-      // $scope.locationData.latitude = position.coords.latitude;
-      // $scope.locationData.longitude = position.coords.longitude;
-      // $scope.locationData.timestamp = position.timestamp;
-      // when geodata call is successful and position is accessible, create the Parse user object
+      // when geodata call is successful and position is accessible, invoke signupUser and pass in location and user data
       signupUser(user, position);
     }, function(err) {
       console.log(err);
     });
   };
 
+  // Create new user in Parse database
+
   var signupUser = function(user, position) {
-    // Create new user in Parse database
+
+    // create a new Parse GeoPoint using the coordinates from the geoData call
 
     var point = new Parse.GeoPoint(position.coords.latitude, position.coords.longitude);
 
