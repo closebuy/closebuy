@@ -29,7 +29,7 @@ angular.module('camerasplash', ['camerasplash.services', 'sell.Services'])
         SaleItem.imgUrl = Camera.picUrl;
 
         $scope.showLoader = false;
-        $state.go('tab.sell');
+        $state.go('sell');
       }, function(error) {
         // file could not be uploaded to Parse
         alert(error);

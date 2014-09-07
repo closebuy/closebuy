@@ -39,7 +39,7 @@ angular.module('sell', ['sell.Services'])
       success: function(newItem) {
         console.log("new item saved successfully");
           // go to the next view when the item is saved successfully.
-          $state.go('tab.sell-confirmation');
+          $state.go('sell-confirmation');
       },
       error: function(err) {
         alert("Error: the item was not uploaded successfully, please try again");
