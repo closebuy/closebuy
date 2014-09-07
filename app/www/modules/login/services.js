@@ -3,7 +3,7 @@ angular.module('login.services', [])
 .factory('Auth', function($state, GeoData) {
   // Login existing user in Parse database
   var loginUser = function(user) {
-    Parse.User.logIn(user.username, user.password, {
+    Parse.User.logIn(user.username.toLowerCase(), user.password, {
       // If successful in logging user in, make them current user by giving them a session token
       success: function(user) {
         var token = Parse.User.current().getSessionToken();
@@ -42,7 +42,7 @@ angular.module('login.services', [])
     var point = new Parse.GeoPoint(position.coords.latitude, position.coords.longitude);
 
     var newUser = new Parse.User();
-    newUser.set("username", user.username);
+    newUser.set("username", user.username.toLowerCase());
     newUser.set("password", user.password);
     newUser.set("location", point);
     newUser.set("skippedImages", []);
