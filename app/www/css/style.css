@@ -41,3 +41,18 @@ text colors etc. here */
 .middle {
 	margin-top: 45%;
 }
+
+.tabs {
+	background-color: #253e3c;
+}
+
+.tab-item .icon {
+	color: #fff;
+	height: 24px;
+	font-size: 24px;
+	margin-top: 5px;
+}
+
+.tab-title {
+	color: #fff;
+}
