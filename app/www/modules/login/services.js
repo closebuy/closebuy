@@ -46,6 +46,7 @@ angular.module('login.services', [])
     newUser.set("password", user.password);
     newUser.set("location", point);
     newUser.set("skippedImages", []);
+    newUser.set("newUser", true);
 
     newUser.signUp(null, {
       // If successful in creating new user, make them current user by giving them a session token
