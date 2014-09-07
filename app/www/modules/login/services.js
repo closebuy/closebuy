@@ -67,7 +67,8 @@ angular.module('login.services', [])
   };
 
   var logoutUser = function() {
-    
+    Parse.User.logOut();
+    $state.go('login');
   };
 
   return {
