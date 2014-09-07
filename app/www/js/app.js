@@ -50,25 +50,29 @@ angular.module('starter', ['ionic', 'login', 'sellbuy', 'sell', 'camerasplash', 
     })
 
     // routing for sell description page
-    .state('tab.sell', {
+    .state('sell', {
       url: "/sell",
-      views: {
-        'tab-sell': {
-          templateUrl: "modules/sell-description/sell-description.html",
-          controller: "SellController"
-         }
-      }
+      templateUrl: "modules/sell-description/sell-description.html",
+      controller: "SellController"
+      // views: {
+      //   'tab-sell': {
+      //     templateUrl: "modules/sell-description/sell-description.html",
+      //     controller: "SellController"
+      //    }
+      // }
     })
 
     // routing for confirmation page
-    .state('tab.sell-confirmation', {
+    .state('sell-confirmation', {
       url: "/sell/confirmation",
-      views: {
-        'tab-sell': {
-          templateUrl: "modules/sell-confirmation/sell-confirmation.html",
-          controller: "SellController"
-         }
-      }
+      templateUrl: "modules/sell-confirmation/sell-confirmation.html",
+      controller: "SellController"
+      // views: {
+      //   'tab-sell': {
+      //     templateUrl: "modules/sell-confirmation/sell-confirmation.html",
+      //     controller: "SellController"
+      //    }
+      // }
     })
 
     // routing for camera splash page
