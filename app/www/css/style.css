@@ -42,8 +42,8 @@ text colors etc. here */
 	margin-top: 45%;
 }
 
-.tabs {
-	background-color: #253e3c;
+.tabs-icon-top .tabs {
+	background-color: #253e3c !important;
 }
 
 .tab-item .icon {
