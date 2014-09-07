@@ -127,7 +127,7 @@ angular.module('starter', ['ionic', 'login', 'sellbuy', 'sell', 'camerasplash', 
 
     // If a user has a session token, direct them to the buy screen; else, direct them to login/signup
     if(Parse.User.current()) {
-      $urlRouterProvider.otherwise('tab/buy');
+      $urlRouterProvider.otherwise('/sellbuy-splash');
     } else {
       $urlRouterProvider.otherwise('/login');
     }
