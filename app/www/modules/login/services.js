@@ -1,6 +1,6 @@
 angular.module('login.services', [])
 
-.factory('Auth', function($state, GeoData) {
+.factory('Auth', function($state, GeoData, $ionicPopup) {
   // Login existing user in Parse database
   var loginUser = function(user) {
     Parse.User.logIn(user.username.toLowerCase(), user.password, {
@@ -18,14 +18,15 @@ angular.module('login.services', [])
         });
       },
       error: function(user) {
-        //
+        $ionicPopup.alert({
+          title: 'Your username or password was incorrect.'
+        });
       }
     });
   };
 
-  var geoData = function(user){
+  var geoData = function(user) {
     GeoData.getData().then(function(position){
-      console.log("getData successful: position - ", position);
       // when geodata call is successful and position is accessible, invoke signupUser and pass in location and user data
       signupUser(user, position);
     }, function(err) {
@@ -63,7 +64,9 @@ angular.module('login.services', [])
         });
       },
       error: function(err) {
-        //
+        $ionicPopup.alert({
+          title: 'That username is already taken.'
+        });
       }
     });
   };
