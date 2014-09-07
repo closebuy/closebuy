@@ -1,20 +1,24 @@
-<ion-pane title="login">
-  <h1>Closebuy</h1>
-  <!-- Login box -->
-  <div ng-controller="LoginController" class="loginBox">
-    <!-- Form to handle existing user login -->
-    <h3>Log In</h3>
-    <form class="loginExisting">
-      <input class="existingUsername" type="text" placeholder="Username" ng-model="existingUser.username" ngRequired="true" ngMaxlength="12">
-      <input class="existingPassword" type="password" placeholder="Password" ng-model="existingUser.password" ngRequired="true">
-      <button type="submit" ng-click="loginUser()">Log In</button>
-    </form>
+<ion-view title="Closebuy" ng-controller="LoginController">
+  <ion-content class="has-header padding">
     <!-- Form to handle new user signup -->
-    <h3>Sign Up</h3>
-    <form class="signupNewUser">
-      <input class="newUsername" type="text" placeholder="Username" ng-model="newUser.username" ngRequired="true">
-      <input class="newPassword" type="password" placeholder="Password" ng-model="newUser.password" ngRequired="true">
-      <button type="submit" ng-click="signupUser()">Sign Up</button>
-    </form>
-  </div>
-</ion-pane>
+    <div class="signupForm" ng-if="newUser">
+      <h1>Sign Up</h1>
+      <form class="signupNewUser" ng-if="newUser">
+        <input class="newUsername" type="text" placeholder="Username" ng-model="newUser.username" ngRequired="true">
+        <input class="newPassword" type="password" placeholder="Password" ng-model="newUser.password" ngRequired="true">
+        <div class="signupButton" ng-click="signupUser()">Sign Up</div>
+      </form>
+      <p>Already a member?   <span ng-click="toggleView()">Log in</span></p>
+    </div>
+    <!-- Form to handle existing user login -->
+    <div class="loginForm" ng-if="!newUser">
+      <h1>Log In</h1>
+      <form class="loginExisting">
+        <input class="existingUsername" type="text" placeholder="Username" ng-model="existingUser.username" ngRequired="true" ngMaxlength="12">
+        <input class="existingPassword" type="password" placeholder="Password" ng-model="existingUser.password" ngRequired="true">
+        <div class="signupButton" ng-click="loginUser()">Log In</div>
+      </form>
+      <p>Don't have an account?   <span class="toggleView" ng-click="toggleView()">Sign up</span></p>
+    </div>
+  </ion-content>
+</ion-view>
