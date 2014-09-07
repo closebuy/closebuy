@@ -1,8 +1,14 @@
-angular.module('buyconfirm', [])
+angular.module('buyconfirm', ['buybrowse.services'])
 
-.controller('ConfirmController', function($scope, $state) {
-  $scope.thankBuyer = function(){
-    console.log("Thank you buyer");
-    $state.go('tab.buythankyou');
+.controller('ConfirmController', ['$scope', 'BuyItems', '$state', function($scope, BuyItems, $state) {
+  $scope.bought = false;
+  $scope.interestedItemId = BuyItems.interestedItemId;
+  $scope.confirmPurchase = function(){
+    //mark the item as purchased
+    BuyItems.markItemAsPurchased($scope.interestedItemId);
+    //setting bought to true disables the buy button and 
+    //displays a thank you message
+    $scope.bought = true;
+    //$state.go('tab.buythankyou');
   };
-})
+}]);

@@ -89,7 +89,7 @@ angular.module('starter', ['ionic', 'login', 'sellbuy', 'sell', 'camerasplash', 
         'tab-buy': {
           templateUrl: "modules/buy-browse/buybrowse.html",
           controller: "BuyBrowseController"
-         }
+        }
       }
     })
 
