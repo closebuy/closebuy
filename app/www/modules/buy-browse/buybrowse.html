@@ -5,12 +5,12 @@
       <img src="{{currentItem.imgURL}}" class="buyImg" on-swipe-left="onSwipeLeft()" on-swipe-right="onSwipeRight()">
     </div>
     <div class="itemInfo">
-      <h5>{{currentItem.description}}</h5>
+      <span>{{currentItem.description}}</span>
       <p class="price">${{currentItem.price}}</p>
     </div>
     <div>
-      <i class="ion-close-circled swipeButtons" ng-click="nextItem()"></i>
-      <i class="ion-checkmark-circled swipeButtons" ng-click="buyItem()"></i>
+      <i class="ion-close-circled swipeButtonLeft" ng-click="nextItem()"></i>
+      <i class="ion-checkmark-circled swipeButtonRight" ng-click="buyItem()"></i>
     </div>
   </div>
   </ion-content>

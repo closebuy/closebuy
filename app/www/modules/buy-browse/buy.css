@@ -1,7 +1,7 @@
 .buyContainer{
   color: #6b8665;
   font-family: Helvetica;
-  padding: 2em 1em 1em 2em;
+  margin: 13px 10px 10px 10px;
 }
 
 .buyImg {
@@ -11,13 +11,39 @@
 }
 
 .itemInfo {
+  margin-top: 15px;
   text-align: center;
+  color: #454545;
 }
+
+.itemInfo span{
+  font-size: 1.4em;
+  color: #454545;
+}
+
 .price{
-  font-size: 2em;
+  margin-top: 20px;
+  font-size: 3em;
   font-weight: bold;
-  color:black;
+  color: #454545;
 }
-.swipeButtons{
-  font-size: 10em;
+
+.swipeButtonLeft, .swipeButtonRight {
+  font-size: 8em;
+  color: #fff;
+  border-radius: 50%;
+  padding: 0 10px;
+  border: 10px solid #6FC6C3;
+}
+
+.swipeButtonLeft {
+  float: left;
+  color: #f7e6e4;
+  background: #ea6060;
+}
+
+.swipeButtonRight {
+  float: right;
+  color: #e3ffee;
+  background: #86d127;
 }

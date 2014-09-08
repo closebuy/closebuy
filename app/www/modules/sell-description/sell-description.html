@@ -1,10 +1,12 @@
 <ion-view title="Sell">
   <ion-content class="has-header padding">
     <div class="sellContainer">
-    <img src="{{item.imgUrl}}" class="sellImg"/>
+      <img src="{{item.imgUrl}}" class="sellImg"/>
      <form class="simple-form" name="sellForm">
-      Enter price: <input type="number" ng-model="item.price" required name="Price"/> <br />
-      Describe item: <input type="text" ng-model="item.description" ng-maxlength="40" name="Desc" placeholder="Enter a short description" />
+      Enter price: 
+      <input type="number" ng-model="item.price" placeholder="Enter price" required name="Price"/> <br />
+      <!-- Describe item:  -->
+      <input type="text" ng-model="item.description" ng-maxlength="40" name="Desc" placeholder="Enter a short description" />
       <!-- Form validation for description length (40 character max) -->
       <span class="error" ng-show="sellForm.Desc.$error.maxlength">
       Exceeded 40 characters</span><br>
