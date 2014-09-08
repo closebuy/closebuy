@@ -1,18 +1,21 @@
 .sellContainer {
   color: #6b8665;
   font-family: Helvetica;
+  margin: 13px 10px 10px 10px;
 }
 
 .sellImg {
-  max-width:100%;
-  max-height:auto;
+  max-width: 100%;
+  max-height: auto;
   border: 5px solid #c4f4f2;
+  margin-bottom: 15px;
 }
 
-input {
+.simple-form input {
   background-color: #c4f4f2;
   border-radius: 5px;
   color: #6b8665;
+  padding: 10px;
 }
 
 .sellConfirm {
@@ -22,6 +25,7 @@ input {
   border: none;
   border-radius: 5px;
   padding: 0.5em;
+  margin-bottom: 20px;
 }
 
 .sellRetake {
