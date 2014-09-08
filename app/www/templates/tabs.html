@@ -14,12 +14,12 @@
   Note: This that the title is Sell, as you want to sell an item, but we 
   route the user to the camera view.
   -->
-  <ion-tab title="Cam" icon="icon ion-pricetags" href="#/tab/camera">
+  <ion-tab title="Sell" icon="icon ion-pricetags" href="#/tab/camera">
     <ion-nav-view name="tab-camera"></ion-nav-view>
   </ion-tab>
   
-  
-  <ion-tab title="Sell" icon="icon ion-pricetags" href="#/tab/sell">
+  <!-- This tab is hidden as there is a routing issue when this tab is deleted -->
+  <ion-tab title="Sell" class="hidden" icon="icon ion-pricetags" href="#/tab/sell">
     <ion-nav-view name="tab-sell"></ion-nav-view>
   </ion-tab>
   
