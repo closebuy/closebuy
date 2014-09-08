@@ -1,0 +1,23 @@
+.buyContainer{
+  color: #6b8665;
+  font-family: Helvetica;
+  padding: 2em 1em 1em 2em;
+}
+
+.buyImg {
+  max-width:100%;
+  max-height:auto;
+  border: 10px solid #c4f4f2;
+}
+
+.itemInfo {
+  text-align: center;
+}
+.price{
+  font-size: 2em;
+  font-weight: bold;
+  color:black;
+}
+.swipeButtons{
+  font-size: 10em;
+}
