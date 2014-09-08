@@ -1,7 +1,7 @@
 <ion-view title="Closebuy" ng-controller="LoginController">
   <ion-content class="has-header padding">
     <!-- Form to handle new user signup -->
-    <div class="signupForm" ng-if="newUserBox">
+    <div class="signupForm" ng-if="newUser">
       <h1 class="signupHeader">Sign Up</h1>
       <form class="signupNewUser" ng-if="newUser">
         <input class="newUsername" type="text" placeholder="Username" ng-model="newUser.username" ngRequired="true">
@@ -11,7 +11,7 @@
       <p class="loginQuestion">Already a member?   <span class="toggleView" ng-click="toggleView()">Log in</span></p>
     </div>
     <!-- Form to handle existing user login -->
-    <div class="loginForm" ng-if="!newUserBox">
+    <div class="loginForm" ng-if="!newUser">
       <h1 class="loginHeader">Log In</h1>
       <form class="loginExisting">
         <input class="existingUsername" type="text" placeholder="Username" ng-model="existingUser.username" ngRequired="true" ngMaxlength="12">
