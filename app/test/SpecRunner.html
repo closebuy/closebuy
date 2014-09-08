@@ -70,11 +70,60 @@
   <!-- include spec files here... -->
   <script src="spec/sellControllerSpecs.js"></script>
 
-
-
-
-
-
   <script>mocha.run()</script>
+  <script>
+
+  var itemResetter = function(i){
+    i.set('purchased', false);
+    i.save();
+  };
+
+
+  // reset each item's "purchased" value to "false"
+  var resetPurchases = function(){
+    var itemUpdate = Parse.Object.extend("Items");
+    var query = new Parse.Query(itemUpdate);
+    query.find({
+      success: function(results) {
+        //call the resetter function on each item in the query results array
+        results.forEach(itemResetter);
+      },
+      error: function(object, error) {
+        // The object was not retrieved successfully.
+        // error is a Parse.Error with an error code and description.
+        console.log('error retrieving object: ', error);
+      }
+    });
+  };
+
+/*  This code doesn't seem to work, possibly because you can't change a property on all users at the same time?
+    var userResetter = function(j){
+    j.set('skippedImages', []);
+    j.save();
+  }
+
+  // reset each user's SkippedImages to "[]"
+  var resetSkippedImages = function(){
+    var query = new Parse.Query(Parse.User);
+    query.find({
+      success: function(results) {
+        for(var j = 0; j < results.length; j ++) {
+        results[j].set('skippedImages', []);
+        results[j].save();
+        }
+      },
+      error: function(object, error) {
+        // The object was not retrieved successfully.
+        // error is a Parse.Error with an error code and description.
+        console.log('error retrieving object: ', error);
+      }
+    });
+  };
+
+*/
+  </script>
+
+  <button onclick="resetPurchases()"> Click to set all "Purchased" values to "false" </button>
+  <button onclick="resetSkippedImages()"> Click to set all "SkippedImage" values to "[]" </button>
 </body>
 </html>
