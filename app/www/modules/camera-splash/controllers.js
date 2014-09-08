@@ -28,7 +28,6 @@ angular.module('camerasplash', ['camerasplash.services', 'sell.Services'])
         // change the SaleItem imgUrl to match the picUrl
         SaleItem.imgUrl = Camera.picUrl;
 
-        $scope.showLoader = false;
         $state.go('tab.sell');
       }, function(error) {
         // file could not be uploaded to Parse
