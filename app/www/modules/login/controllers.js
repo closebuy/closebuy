@@ -1,14 +1,14 @@
 angular.module('login', ['login.services'])
 
 .controller('LoginController', function($scope, Auth) {
-  $scope.newUser = false;
+  $scope.newUserBox = true;
 
   $scope.existingUser = {};
 
   $scope.newUser = {};
 
   $scope.toggleView = function() {
-    $scope.newUser = !$scope.newUser;
+    $scope.newUserBox = !$scope.newUserBox;
   };
 
   $scope.loginUser = function() {
