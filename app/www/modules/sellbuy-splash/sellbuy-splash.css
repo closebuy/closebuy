@@ -1,7 +1,10 @@
-.question h1{
+.question {
   margin-top: 10%;
   text-align: center;
   width: 100%;
+}
+
+.question h1 {
   font-size: 4em;
   font-family: 'Damion', cursive;
   color: white;
