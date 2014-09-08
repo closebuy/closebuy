@@ -2,6 +2,9 @@
   margin-top: 10%;
   text-align: center;
   width: 100%;
+}
+
+.question h1 {
   font-family: 'Damion', cursive;
   color: white;
 }
