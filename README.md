@@ -26,9 +26,9 @@ Closebuy, for selling and buying near you.
 
 ## Requirements
 
--Ionic
--Android SDK
--XCode
+1.  Ionic
+1.  Android SDK
+1.  XCode
 
 ## Development
 
