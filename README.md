@@ -41,6 +41,7 @@ npm install q
 npm install shelljs
 cordova plugin add org.apache.cordova.camera
 ```
+See Wiki pages for Ionic iOS/Android setup
 
 ### Roadmap
 
