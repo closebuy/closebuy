@@ -9,6 +9,8 @@ angular.module('buyconfirm', ['buybrowse.services'])
     //setting bought to true disables the buy button and 
     //displays a thank you message
     $scope.bought = true;
-    //$state.go('tab.buythankyou');
+    setTimeout(function() {
+      $state.go('tab.buybrowse');
+    }, 2000);
   };
 }]);

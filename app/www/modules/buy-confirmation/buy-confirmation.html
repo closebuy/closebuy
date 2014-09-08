@@ -1,10 +1,12 @@
 <ion-view title="Buy Confirmation">
   <ion-content class="has-header padding">
   	<div class="middle">
-	    <div class="confirmHeading">Confirm your purchase</div>
-	    <br />
-	    <button class="button" ng-click="confirmPurchase()" ng-disabled="bought">Buy</button>
-	    <br /><br />
+  		<div class="confirmPurchase" ng-show="!bought">
+		    <div class="confirmHeading">Confirm your purchase</div>
+		    <br />
+		    <button class="button" ng-click="confirmPurchase()" ng-disabled="bought">Buy</button>
+		    <br /><br />
+		  </div>
 	    <div class="confirmHeading" ng-show="bought">
 	      Thank you! <br /><br />
 	      The seller will contact you soon
