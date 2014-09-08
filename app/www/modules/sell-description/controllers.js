@@ -12,7 +12,7 @@ angular.module('sell', ['sell.Services'])
 
   // upload the item to Parse
 
-  $scope.sell = function(item, callback){
+  $scope.sell = function(item){
     SaleItem = item;
 
     // create the Items class to match the Parse Items schema
