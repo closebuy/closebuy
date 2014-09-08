@@ -55,6 +55,9 @@
 }
 
 div.sellThanks {
-  font-size:2em;
+  font-size: 4em;
+  line-height: 0.7em;
   font-family: 'Damion', cursive;
+  color: #fff;
+  text-align: center;
 }
