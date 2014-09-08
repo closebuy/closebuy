@@ -1,7 +1,6 @@
 angular.module('buybrowse', ['buybrowse.services'])
 
 .controller('BuyBrowseController', function($scope, BuyItems, $state, $q){
-  //get
   $scope.getItems = function(){
     //a promise going to get the new items 
     var promise = BuyItems.getNewItems(); 
