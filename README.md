@@ -1,6 +1,5 @@
 Closebuy
 ========
-# Project Name
 
 Closebuy, for selling and buying near you.
 
@@ -51,3 +50,7 @@ View the project roadmap [here](LINK_TO_PROJECT_ISSUES)
 ## Contributing
 
 See [Contributing.md](Contributing.md) for contribution guidelines.
+
+## Testing
+
+A testing framework has been set up using Mocha and Chai.  The files can be found in the app/test/ folder in this repo.  From within the app/test/ folder, run npm install angular-mocks to install this dependency.  
