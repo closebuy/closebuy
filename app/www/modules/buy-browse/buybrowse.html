@@ -1,5 +1,5 @@
 <ion-view title="Discover" ng-init="getItems()">
-  <ion-content class="has-header padding">
+  <ion-pane class="has-header padding">
   <div class="buyContainer">
     <div class="item item-image" can-swipe="true">
       <img src="{{currentItem.imgURL}}" class="buyImg" on-swipe-left="onSwipeLeft()" on-swipe-right="onSwipeRight()">
@@ -13,5 +13,5 @@
       <i class="ion-checkmark-circled swipeButtonRight" ng-click="buyItem()"></i>
     </div>
   </div>
-  </ion-content>
+  </ion-pane>
 </ion-view>
